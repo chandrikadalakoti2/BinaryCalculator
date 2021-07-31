@@ -1,6 +1,7 @@
-body{width:33%;}
+body{width:33%;background-color:#888888;}
 #res{background-color:lightgray;display:flex;justify-content: start;padding: 0;vertical-align:text-top;text-align:left;border:2px solid;height:48px;font-size:20px;overflow:auto;}
 #btn0,#btn1{background-color:lightgreen;color:brown;}
 #btnClr,#btnEql{background-color:darkgreen;color:white;}
 #btnSum,#btnSub,#btnMul,#btnDiv{background-color:black;color:red;}
 #btns button{width:25%;height:36px;font-size:18px;margin:0px;float:left;}
+#container{margin:0 auto;}
