@@ -4,4 +4,5 @@ body{width:33%;background-color:#888888;}
 #btnClr,#btnEql{background-color:darkgreen;color:white;}
 #btnSum,#btnSub,#btnMul,#btnDiv{background-color:black;color:red;}
 #btns button{width:25%;padding:10px;height:36px;font-size:18px;margin:0px;float:left;}
-#container{float:center;}
+#container{display:inline-block;margin:auto;}
+h1{text-align:center;)
