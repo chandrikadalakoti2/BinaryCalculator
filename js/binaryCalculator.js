@@ -1,6 +1,6 @@
 result=document.getElementById('res');
 
-document.getElementById('cal').addEventListener('click',function(e){
+document.getElementById('container').addEventListener('click',function(e){
     result=document.getElementById('res');
     if(e.target.id==='btnClr')
         result.innerHTML="";
@@ -39,14 +39,25 @@ function evalExpression(exp)
         var exp1,exp2;
         exp1=arr[0];
         exp2=arr[1];
+        console.log(arr);
+        if(exp2=='')
+        res=exp1;
+        else
+        if(exp1=='')
+        res=exp2;
+        else
+        if(exp1!='' && exp2!='')
+        {
         switch(op)
         {
             case '+':
+            
                 res=((parseInt(exp1,2)+parseInt(exp2,2)).toString(2));
+                console.log(exp1+" "+exp2);
                 break;
 
             case '-':
-                res=((parseInt(exp1,2)-parseInt(exp2,2)).toString(2));
+                res=Math.abs((parseInt(exp1,2)-parseInt(exp2,2)).toString(2));
                 break;
 
             case '*':
@@ -54,10 +65,25 @@ function evalExpression(exp)
                 break;
                 
             case '/':
-                res=((parseInt(exp1,2)/parseInt(exp2,2)).toString(2));
-                res=parseInt(res).toFixed();
-                break;        
+                if(exp2!=0)
+                {
+                res=Math.round((parseInt(exp1,2)/parseInt(exp2,2)).toString(2));
+                res=(parseInt(res));
+                }
+                else
+                res=0;
+                break; 
+                
+            case undefined:
+                    if(exp2==undefined)
+                    res=exp1;
+                    else
+                    if(exp1==undefined)
+                    res=exp2;
+                    break;
+                
         }
         result.innerHTML=res;
-    }    
+    }
+}    
 }
